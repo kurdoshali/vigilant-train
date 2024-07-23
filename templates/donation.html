@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <h2><a id="homepage-A" href="homepage.html">GWU Institute of Politics</a></h2>
+            <nav>
+                <ul>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="student_programs.html">Student Programs</a></li>
+                    <li><a href="student_task_forces.html">Student Task Forces</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="donation.html">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="donate-body">
+        <div class="donate-container">
+            <h1>Donation</h1>
+            <form>
+                <div class="section">
+                    <label for="designation">Designation</label>
+                    <select id="designation" name="designation">
+                        <option value="area-of-greatest-need">Area of Greatest Need</option>
+                        <option value="student-programs">Student Programs</option>
+                        <option value="student-task-forces">Student Task Forces</option>
+                        <option value="research">Research</option>
+                        <option value="partnerships">Partnerships</option>
+                        <option value="events">Events</option>
+                    </select>
+                </div>
+                
+                <div class="section">
+                    <label for="amount">Amount</label>
+                    <div class="amount-options">
+                        <label><input type="radio" name="amount" value="50">$50</label>
+                        <label><input type="radio" name="amount" value="100">$100</label>
+                        <label><input type="radio" name="amount" value="250">$250</label>
+                        <label><input type="radio" name="amount" value="500">$500</label>
+                        <label><input type="radio" name="amount" value="1000">$1,000</label>
+                        <label><input type="radio" name="amount" value="2500">$2,500</label>
+                        <label>
+                            <input type="radio" name="amount" value="other">
+                            Other: <input type="number" id="custom-amount" name="custom-amount" min="1" step="any">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <button type="submit">Donate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Institute of Politics. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#privacy">Privacy Statement</a></li>
+                    <li><a href="#accessibility">Web Accessibility</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,9 +2,104 @@
 <html>
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute of Politics at GWU</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <h1>HELLOOO</h1>
+    <header>
+        <div class="container">
+            <h2><a id="homepage-A" href="homepage.html">GWU Institute of Politics</a></h2>
+            <nav>
+                <ul>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="student_programs.html">Student Programs</a></li>
+                    <li><a href="student_task_force.html">Student Task Force</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="donation.html">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="events-page-body">
+        <div class="sidebar">
+            <h2>Search Events</h2>
+            <form id="search-events-form">
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" name="event-name" placeholder="Enter event name">
+                </div>
+                <div class="form-group">
+                    <label for="event-type">Event Type</label>
+                    <select id="event-type" name="event-type">
+                        <option value="">Select event type</option>
+                        <option value="conference">Conference</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="webinar">Webinar</option>
+                        <option value="meetup">Meetup</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" id="event-date" name="event-date">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter location">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <section id="events" class="content-section">
+            <div class="container">
+                <h2>Events</h2>
+                <div class="flex-container">
+                    <a class="a-events" href="events.html">
+                        <div class="event">
+                            <h3>Middle East Dialogue - A Conversation with Bret Stephens</h3>
+                            <p>Date: April 29, 2024 | Time: 6:00 PM</p>
+                        </div>
+                    </a>
+                    <a class="a-events" href="events.html">
+                        <div class="event">
+                            <h3>A Conversation with Ava DuVernay: Resistance, Storytelling, and Film</h3>
+                            <p>Date: April 24, 2024 | Time: 7:00 PM</p>
+                        </div>
+                    </a>
+                    <a class="a-events" href="events.html">
+                        <div class="event">
+                            <h3>Middle East Dialogue - A Conversation with Bret Stephens</h3>
+                            <p>Date: April 29, 2024 | Time: 6:00 PM</p>
+                        </div>
+                    </a>
+                    <a class="a-events" href="events.html">
+                        <div class="event">
+                            <h3>A Conversation with Ava DuVernay: Resistance, Storytelling, and Film</h3>
+                            <p>Date: April 24, 2024 | Time: 7:00 PM</p>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Institute of Politics. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#privacy">Privacy Statement</a></li>
+                    <li><a href="#accessibility">Web Accessibility</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
