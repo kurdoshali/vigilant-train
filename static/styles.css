@@ -29,8 +29,8 @@ a:hover {
 }
 
 header {
-    background: #fff;
-    color: #051c3b;
+    background: #051c3b;
+    color: #fff;
     padding-top: 2px;
     min-height: 70px;
     border-bottom: #77aaff 3px solid;
@@ -39,7 +39,7 @@ header {
 
 
 header a {
-    color: #051c3b;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -120,11 +120,11 @@ img {
     clear: both;
 }
 
-.scroll-flex {
+/* .scroll-flex {
     display: flex; 
     overflow-x: scroll;
     width: 50%;
-}
+} */
 .flex-container {
     display: flex; 
     justify-content: flex-start;
@@ -197,7 +197,8 @@ img {
 }
 
 #events {
-    background-color: #051c3b;
+    /* background-color: #051c3b; */
+    border: none;
 }
 #events h2 {
     color: #ffffff;
@@ -384,6 +385,15 @@ select {
 
 
 
+
+
+
+
+
+
+
+
+
 /* research html */
 .searchfield {
     font-weight: 600;
@@ -523,7 +533,7 @@ select {
     margin: 10px;
     padding: 20px;
     height: 50px;
-    border: 1px solid #000;
+    
     justify-content: center;
     align-items: center;
 }
@@ -532,6 +542,53 @@ select {
     display: flex;
     flex-wrap: wrap;
 }
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 100px;
+}
+
+.book-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.book-item:hover {
+    transform: scale(1.05);
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+}
+
+.book-item p {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* partnerships page */
 
