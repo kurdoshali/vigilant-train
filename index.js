@@ -2,17 +2,41 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./models'); // Import the models directory
-
+const path = require('path');
 const app = express();
 app.use(bodyParser.json());
 
 app.use(express.static('public'));
+
+// Serve the homepage
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'templates', 'index.html'));
+});
+
+// Serve the event-specific page
+app.get('/event/:id', async (req, res) => {
+    const eventId = req.params.id;
+    try {
+        const event = await db.Event.findByPk(eventId);
+        if (event) {
+            // In a real scenario, you might use a template engine to dynamically generate HTML here
+            console.log('Serving file:', path.join(__dirname, 'public', 'templates', 'event.html'));
+            res.sendFile(path.join(__dirname, 'public', 'templates', 'event.html'));
+        } else {
+            res.status(404).send('Event not found');
+        }
+    } catch (error) {
+        console.error('Error occurred:', error);  // Log the error to the console
+        res.status(500).send('Server Error');
+    }
+});
+
 // Get all events
 app.get('/api/events', async (req, res) => {
     console.log('in get request events');
     try {
         const events = await db.Event.findAll();
-        console.log('Returning events:', events);
+        
         res.json(events);
     } catch (error) {
         console.error('Error fetching events:', error);
@@ -48,6 +72,64 @@ app.get('/api/upcoming-events', async (req, res) => {
     }
 });
 
+// Get all events
+app.get('/api/publications', async (req, res) => {
+    console.log('in get request publications');
+    try {
+        const publications = await db.Publication.findAll();
+        
+        res.json(publications);
+    } catch (error) {
+        console.error('Error fetching publications:', error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Serve the event-specific page
+app.get('/publication/:id', async (req, res) => {
+    const publicationId = req.params.id;
+    try {
+        const publication = await db.Publication.findByPk(publicationId);
+        if (publication) {
+            // In a real scenario, you might use a template engine to dynamically generate HTML here
+            console.log('Serving file:', path.join(__dirname, 'public', 'templates', 'publication.html'));
+            res.sendFile(path.join(__dirname, 'public', 'templates', 'publication.html'));
+        } else {
+            res.status(404).send('Event not found');
+        }
+    } catch (error) {
+        console.error('Error occurred:', error);  // Log the error to the console
+        res.status(500).send('Server Error');
+    }
+});
+
+// Get a single event by id
+app.get('/api/publications/:id', async (req, res) => {
+    try {
+        const publication = await db.Publication.findByPk(req.params.id);
+        if (publication) {
+            res.json(publication);
+        } else {
+            res.status(404).json({ error: 'Publication not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.get('/api/upcoming-publications', async (req, res) => {
+    try {
+        const publications = await db.Publication.findAll({
+            order: [
+                ['published_date', 'DESC']
+            ]
+        });
+        res.json(publications);
+    }
+    catch (error) {
+        res.status(500).json({ error: error.message});
+    }
+});
 // // Create a new event
 // app.post('/api/events', async (req, res) => {
 //     try {

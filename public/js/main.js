@@ -9,6 +9,10 @@ async function testApiCalls() {
     const singleEvent = await singleEventResponse.json();
     console.log('Event with ID 1:', singleEvent);
 
+    const allPublicationsResponse = await fetch('../api/publications');
+    const allPublications = await allPublicationsResponse.json();
+    console.log('All Publications: ', allPublications);
+
 }
 
 async function filteredEventsCall() {
