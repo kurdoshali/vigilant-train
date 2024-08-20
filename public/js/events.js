@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const eventsContainer = document.getElementById('events-container');
 
             events.forEach(event => {
+                
                 const eventElement = document.createElement('div');
                 eventElement.className = 'event';
 
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 eventsContainer.appendChild(eventElement);
             });
+            console.log(events);
         })
         .catch(error => {
             console.error('Error fetching events:', error);

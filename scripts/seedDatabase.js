@@ -8,10 +8,10 @@ async function seedDatabase() {
         await sequelize.sync({ force: true }); // Drop and recreate the tables
 
         const events = [
-            { title: 'Event 1', description: 'Description for event 1', start_date: new Date('2024-08-01T10:00:00Z'), end_date: new Date('2024-08-01T14:00:00Z'), location: 'Location 1' },
-            { title: 'Event 2', description: 'Description for event 2', start_date: new Date('2024-08-02T14:00:00Z'), end_date: new Date('2024-08-02T14:00:00Z'), location: 'Location 2' },
-            { title: 'Event 3', description: 'Description for event 3', start_date: new Date('2024-09-03T14:00:00Z'), end_date: new Date('2024-09-03T14:00:00Z'), location: 'Location 3' },
-            { title: 'Event 4', description: 'Description for event 4 longer description to test for formatting with longer description', start_date: new Date('2024-09-04T14:00:00Z'), end_date: new Date('2024-09-04T14:00:00Z'), location: 'Location 4 longer location' },
+            { title: 'Event 1', description: 'Description for event 1', start_date: new Date('2024-08-01T10:00:00Z'), end_date: new Date('2024-08-01T14:00:00Z'), location: 'Location 1', speaker: 'Jane Rowly' },
+            { title: 'Event 2', description: 'Description for event 2', start_date: new Date('2024-08-02T14:00:00Z'), end_date: new Date('2024-08-02T14:00:00Z'), location: 'Location 2', speaker: 'Jon Snow' },
+            { title: 'Event 3', description: 'Description for event 3', start_date: new Date('2024-09-03T14:00:00Z'), end_date: new Date('2024-09-03T14:00:00Z'), location: 'Location 3', speaker: 'Tierny Lannister' },
+            { title: 'Event 4', description: 'Description for event 4 longer description to test for formatting with longer description', start_date: new Date('2024-09-04T14:00:00Z'), end_date: new Date('2024-09-04T14:00:00Z'), location: 'Location 4 longer location', speaker: 'Saul Goodman' },
             // Add more events as needed
         ];
 

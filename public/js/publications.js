@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const publicationsContainer = document.getElementById('publications-container');
 
             publications.forEach(publication => {
+                console.log(publication);
                 const publicationElement = document.createElement('div');
                 publicationElement.className = 'book-item';
 

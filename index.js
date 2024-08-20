@@ -58,7 +58,7 @@ app.get('/api/events/:id', async (req, res) => {
     }
 });
 
-app.get('/api/upcoming-events', async (req, res) => {
+app.get('/api/ordered-events', async (req, res) => {
     try {
         const events = await db.Event.findAll({
             order: [
@@ -69,6 +69,24 @@ app.get('/api/upcoming-events', async (req, res) => {
     }
     catch (error) {
         res.status(500).json({ error: error.message});
+    }
+});
+
+app.get('/api/upcoming-events', async (req, res) => {
+    try {
+        const upcomingEvents = await db.Event.findAll({
+            where: {
+                start_date: {
+                    [db.Sequelize.Op.gte]: new Date() // Filter for events starting today or in the future
+                }
+            },
+            order: [
+                ['start_date', 'ASC'] // Order by start_date ascending (earliest first)
+            ]
+        });
+        res.json(upcomingEvents);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
     }
 });
 

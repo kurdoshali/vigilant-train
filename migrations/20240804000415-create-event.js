@@ -24,6 +24,9 @@ module.exports = {
       location: {
         type: Sequelize.STRING
       },
+      speaker: {
+        type: Sequeslize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

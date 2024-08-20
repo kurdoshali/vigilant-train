@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('publication-title').textContent = publication.title;
             document.getElementById('publication-author').textContent = publication.author;
             document.getElementById('publication-description').textContent = publication.description;
-            document.getElementById('publication-published_date').textContent = new Date(publication.published_date).toLocaleString();
+            document.getElementById('publication-published_date').textContent = new Date(publication.published_date).toDateString();
             document.getElementById('publication-image').textContent = publication.picture_url;
             document.getElementById('publication-link').textContent = publication.link_url;
         })

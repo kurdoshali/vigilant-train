@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Publication.init({
-    published_date: DataTypes.DATE,
+    published_date: DataTypes.DATEONLY,
     title: DataTypes.STRING,
     author: DataTypes.STRING,
     picture_url: DataTypes.STRING,
