@@ -13,6 +13,10 @@ async function testApiCalls() {
     const allPublications = await allPublicationsResponse.json();
     console.log('All Publications: ', allPublications);
 
+    const allPeopleResponse = await fetch('../api/people');
+    const allPeople = await allPeopleResponse.json();
+    console.log('All People', allPeople);
+
 }
 
 async function filteredEventsCall() {

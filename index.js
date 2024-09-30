@@ -148,6 +148,16 @@ app.get('/api/upcoming-publications', async (req, res) => {
         res.status(500).json({ error: error.message});
     }
 });
+
+app.get('/api/people', async (req, res) => {
+    try {
+      const people = await db.Person.findAll();
+      res.json(people);
+    } catch (error) {
+      console.error('Error fetching People:', error);
+      res.status(500).json({ error: error.message, stack: error.stack });
+    }
+  });
 // // Create a new event
 // app.post('/api/events', async (req, res) => {
 //     try {

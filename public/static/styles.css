@@ -95,7 +95,7 @@ img {
     grid-template: 1fr / 1fr;
     place-items: center;
     isolation: isolate;
-    height: 775px;
+    height: 100%;
     justify-self: end;
 }
 

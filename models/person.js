@@ -16,13 +16,16 @@ module.exports = (sequelize, DataTypes) => {
   Person.init({
     type: DataTypes.STRING,
     position: DataTypes.STRING,
+    name: DataTypes.STRING,
     picture_url: DataTypes.STRING,
     major: DataTypes.STRING,
+    minor: DataTypes.STRING,
     hometown: DataTypes.STRING,
     biography: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Person',
+    tableName: 'People',
   });
   return Person;
 };

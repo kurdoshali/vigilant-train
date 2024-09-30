@@ -6,18 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             events.forEach(event => {
                 
+                // Create the <a> element
+                const eventLink = document.createElement('a');
+                eventLink.className = 'a-events';
+                eventLink.href = `/event/${event.id}`;  // Link to the specific event page
+
+                // Create the <div> element for the event content
                 const eventElement = document.createElement('div');
                 eventElement.className = 'event';
 
+                // Populate the event details inside the <div>
                 eventElement.innerHTML = `
-                    <h2><a href="/event/${event.id}">${event.title}</a></h2>
-                    <p>${event.description}</p>
-                    <p><strong>Start:</strong> ${new Date(event.start_date).toLocaleString()}</p>
-                    <p><strong>End:</strong> ${new Date(event.end_date).toLocaleString()}</p>
-                    <p><strong>Location:</strong> ${event.location}</p>
+                    <h3>${event.title}</h3>
+                    <p>Date: ${new Date(event.start_date).toLocaleDateString()} | Time: ${new Date(event.start_date).toLocaleTimeString()}</p>
                 `;
 
-                eventsContainer.appendChild(eventElement);
+                // Append the <div> to the <a> element
+                eventLink.appendChild(eventElement);
+
+                // Append the <a> element to the events container
+                eventsContainer.appendChild(eventLink);
             });
             console.log(events);
         })
