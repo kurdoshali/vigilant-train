@@ -1,37 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publication Details</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <title>Book Detail Page</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .book-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .book-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        .book-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .published-date {
+            font-size: 1.1em;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .book-details {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .cta-button {
+                padding: 12px 24px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="container">
             <h2><b><a id="homepage-A" href="/">GWU Institute of Politics</a></b></h2>
             <nav>
                 <ul>
-                    <li><b><a href="events.html">Events</a></b></li>
-                    <li><a href="student_programs.html">Student Programs</a></li>
-                    <li><a href="student_task_force.html">Student Task Force</a></li>
-                    <li><a href="partnerships.html">Partnerships</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="donation.html">Donate</a></li>
+                    <li><b><a href="/templates/events.html">Events</a></b></li>
+                    <li><a href="/templates/student_programs.html">Student Programs</a></li>
+                    <li><a href="/templates/student_task_force.html">Student Task Force</a></li>
+                    <li><a href="/templates/partnerships.html">Partnerships</a></li>
+                    <li><a href="/templates/research.html">Research</a></li>
+                    <li><a href="/templates/donation.html">Donate</a></li>
+                    <li><a href="/templates/people.html">People</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <h1 id="publication-title">Publication Title</h1>
-    <div id="publication-details">
-        <p id="publication-description"></p>
-        <p><strong>Author:</strong> <span id="publication-author"></span></p>
-        <p><strong>Date:</strong> <span id="publication-published_date"></span></p>
-        <p id="publication-image"></p>
-        <p id="publication-link"></p>
-        <!-- need publication image with link_url as link -->
+    <div class="container">
+        <div class="book-details">
+            <div class="book-image">
+                <img id="bookCover" src="/api/placeholder/400/600" alt="Book Cover">
+            </div>
+            <div class="book-info">
+                <h1 id="bookTitle">Book Title</h1>
+                <div class="author" id="bookAuthor">Author Name</div>
+                <div class="published-date" id="publishedDate">Published Date</div>
+                <p class="description" id="bookDescription">Book description goes here...</p>
+                <a href="#" class="cta-button" id="ctaButton">Learn More</a>
+            </div>
+        </div>
     </div>
 
-    <script src="../js/publication.js"></script>
+    <script>
+        const bookData = {
+            published_date: "2023-09-15",
+            title: "The Solidarity Economy",
+            author: "John Doe",
+            picture_url: "/api/placeholder/400/600",
+            link_url: "https://example.com/book-link",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        };
+
+        document.getElementById('bookTitle').textContent = bookData.title;
+        document.getElementById('bookAuthor').textContent = bookData.author;
+        document.getElementById('publishedDate').textContent = `Published ${new Date(bookData.published_date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`;
+        document.getElementById('bookDescription').textContent = bookData.description;
+        document.getElementById('bookCover').src = bookData.picture_url;
+        document.getElementById('ctaButton').href = bookData.link_url;
+    </script>
 </body>
+
 </html>
