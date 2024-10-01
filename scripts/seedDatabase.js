@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('postgres://kurdoshali:gwu_iop_db2024@localhost:5432/gwu_iop_db');
+const sequelize = new Sequelize('postgres://ilincahirtopanu:22cart64@localhost:5432/gwu_iop_db');
 const Event = require('../models/event')(sequelize, DataTypes);
 const Publication = require('../models/publication')(sequelize, DataTypes);
 const person = require('../models/person')(sequelize, DataTypes);
