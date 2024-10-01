@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publication Details</title>
+    <title>Book Detail Page</title>
     <link rel="stylesheet" href="../static/styles.css">
 </head>
-<body>
+
+<body  >
     <header>
         <div class="container">
             <h2><b><a id="homepage-A" href="/">GWU Institute of Politics</a></b></h2>
             <nav>
                 <ul>
-                    <li><b><a href="events.html">Events</a></b></li>
-                    <li><a href="student_programs.html">Student Programs</a></li>
-                    <li><a href="student_task_force.html">Student Task Force</a></li>
-                    <li><a href="partnerships.html">Partnerships</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="donation.html">Donate</a></li>
+                    <li><b><a href="/templates/events.html">Events</a></b></li>
+                    <li><a href="/templates/student_programs.html">Student Programs</a></li>
+                    <li><a href="/templates/student_task_force.html">Student Task Force</a></li>
+                    <li><a href="/templates/partnerships.html">Partnerships</a></li>
+                    <li><a href="/templates/research.html">Research</a></li>
+                    <li><a href="/templates/donation.html">Donate</a></li>
+                    <li><a href="/templates/people.html">People</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <h1 id="publication-title">Publication Title</h1>
-    <div id="publication-details">
-        <p id="publication-description"></p>
-        <p><strong>Author:</strong> <span id="publication-author"></span></p>
-        <p><strong>Date:</strong> <span id="publication-published_date"></span></p>
-        <p id="publication-image"></p>
-        <p id="publication-link"></p>
-        <!-- need publication image with link_url as link -->
+    <div class="publication-container">
+        <div class="book-details">
+            <div class="book-image">
+                <img id="bookCover" src="https://via.placeholder.com/700" alt="Book Cover">
+            </div>
+            <div class="book-info">
+                <h1 id="bookTitle">Book Title</h1>
+                <div class="author" id="bookAuthor">Author Name</div>
+                <div class="published-date" id="publishedDate">Published Date</div>
+                <p class="description" id="bookDescription">Book description goes here...</p>
+                <a href="#" class="cta-button" id="ctaButton">Read PDF</a>
+            </div>
+        </div>
     </div>
 
     <script src="../js/publication.js"></script>
 </body>
+
 </html>
