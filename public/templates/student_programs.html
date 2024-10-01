@@ -18,14 +18,14 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #fff;
+.head {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    margin-top:50px;
 }
 
 .search-bar {
@@ -88,9 +88,26 @@ main {
     color: #555;
 }
     </style>
+<link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <header>
+    <div id="navbar">
+        <!-- <div class="container"> -->
+            <h2><b><a id="homepage-A" href="/" style="font-size: 25px">GWU Institute of Politics</a></b></h2>
+            <nav>
+                <ul>
+                    <a href="/templates/events.html">Events</a>
+                    <a href="/templates/student_programs.html">Student Programs</a>
+                    <a href="/templates/student_task_force.html">Student Task Force</a>
+                    <a href="/templates/partnerships.html">Partnerships</a>
+                    <a href="/templates/research.html">Research</a>
+                    <a href="/templates/donation.html">Donate</a>
+                    <a href="/templates/people.html">People</a>
+                </ul>
+            </nav>
+        <!-- </div> -->
+      </div>
+    <div class="head">
         <div class="search-bar">
             <input type="text" placeholder="Search for books...">
         </div>
@@ -109,7 +126,7 @@ main {
                 <option value="author3">Author 3</option>
             </select>
         </div>
-    </header>
+    </div>
     <main>
         <div class="book-gallery">
             <div class="book-item">
@@ -128,5 +145,18 @@ main {
             <!-- Add as many book items as needed -->
         </div>
     </main>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "5px";
+    document.getElementById("homepage-A").style.fontSize = "20px";
+} else {
+    document.getElementById("navbar").style.padding = "10px";
+    document.getElementById("homepage-A").style.fontSize = "25px";
+}
+}
+</script>
 </body>
 </html>

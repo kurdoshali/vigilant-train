@@ -10,8 +10,8 @@
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
 
-    <header>
-        <div class="container">
+    <!-- <header>
+        <div class="header">
             <h2><b><a id="homepage-A" href="/">GWU Institute of Politics</a></b></h2>
             <nav>
                 <ul>
@@ -25,7 +25,24 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
+
+    <div id="navbar">
+        <!-- <div class="container"> -->
+            <h2><b><a id="homepage-A" href="/" style="font-size: 25px">GWU Institute of Politics</a></b></h2>
+            <nav>
+                <ul>
+                    <a href="/templates/events.html">Events</a>
+                    <a href="/templates/student_programs.html">Student Programs</a>
+                    <a href="/templates/student_task_force.html">Student Task Force</a>
+                    <a href="/templates/partnerships.html">Partnerships</a>
+                    <a href="/templates/research.html">Research</a>
+                    <a href="/templates/donation.html">Donate</a>
+                    <a href="/templates/people.html">People</a>
+                </ul>
+            </nav>
+        <!-- </div> -->
+      </div>
         <!-- <section id="hero"> -->
         <div id="hero" class="grid">
             <h2>The Institute of Politics seeks to inspire and guide students by promoting politics, encouraging action, and instilling a drive to tackle real-world problems. </h2>
@@ -37,7 +54,7 @@
         <div class="container">
             <h2 style="color:black">Upcoming Events</h2>
             <div id="events-container" class="flex-container">
-                
+                    
             </div>
             <a href="events.html" class="button">View All Events</a>
         </div>
@@ -102,6 +119,18 @@
         ScrollReveal().reveal('#internships', { delay: 500 });
         ScrollReveal().reveal('#fellows', { delay: 500 });
         ScrollReveal().reveal('#about', { delay: 500 });
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "5px";
+            document.getElementById("homepage-A").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "10px";
+            document.getElementById("homepage-A").style.fontSize = "25px";
+        }
+        }
         </script>
 
 </body>
