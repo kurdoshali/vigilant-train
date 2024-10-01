@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: url(background_design.jpg);
     
 }
 
@@ -35,8 +35,8 @@ html.sr .load-hidden {
 }
 
 #navbar {
-    background: #ffffff;
-    color: #050b7a;
+    color: #ffffff;
+    /* background:#051c3b; */
     overflow: hidden;
     /* padding: 12px; Large padding which will shrink on scroll (using JS) */
     transition: 0.4s; /* Adds a transition effect when the padding is decreased */
@@ -45,6 +45,7 @@ html.sr .load-hidden {
     top: 0; /* At the top */
     z-index: 99;
     padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -63,7 +64,7 @@ html.sr .load-hidden {
 
 
 #navbar a {
-    color: #050b7a;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -290,7 +291,7 @@ img {
     background-color: #253a55;
 } */
 .content-section {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     padding: 30px 0;
     border-bottom: #e3dccc 2px dashed;     
 }

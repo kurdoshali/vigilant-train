@@ -126,9 +126,21 @@
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             document.getElementById("navbar").style.padding = "5px";
             document.getElementById("homepage-A").style.fontSize = "20px";
+            document.getElementById("navbar").style.backgroundColor = "#fff";
+            document.getElementById("homepage-A").style.color = "#033c5a";
+            document.querySelectorAll("#navbar nav ul a").forEach(anchor => {
+                anchor.style.color = "#033c5a";
+            });
+            
         } else {
             document.getElementById("navbar").style.padding = "10px";
             document.getElementById("homepage-A").style.fontSize = "25px";
+            document.getElementById("navbar").style.backgroundColor = "";
+            document.getElementById("homepage-A").style.color = "#ffffff";
+            document.querySelectorAll("#navbar nav ul a").forEach(anchor => {
+                anchor.style.color = "#ffffff";
+            });
+
         }
         }
         </script>
