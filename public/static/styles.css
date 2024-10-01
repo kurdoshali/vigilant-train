@@ -3,16 +3,18 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #fefefe;
+    background: #f4f4f4;
     
 }
 
 #homepage-A {
-    font-size: 24px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.4s;
 }
 
 #homepage-A:hover {
-    color: #fff;
+    color: #937921;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -32,21 +34,45 @@ html.sr .load-hidden {
     visibility: hidden;
 }
 
-header {
-    background: #051c3b;
-    color: #fff;
-    padding-top: 2px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
-    
+#navbar {
+    background: #ffffff;
+    color: #050b7a;
+    overflow: hidden;
+    /* padding: 12px; Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+    padding: 12px;
+
 }
 
+  
+  /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+  @media screen and (max-width: 580px) {
+    header {
+      padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+    }
+    header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
 
-header a {
-    color: #fff;
+
+#navbar a {
+    color: #050b7a;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
+    transition: 0.3s;
+    float: left;
+    text-align: center;
+    padding: 12px;
+    line-height: 25px;
+    border-radius: 4px;
 }
 
 header ul {
@@ -70,8 +96,11 @@ header nav {
     top: 0;
     z-index: 1;
 }
-header nav a:hover{
-    font-size: 85%;
+
+#navbar a:hover{
+    color:#937921;
+    text-decoration: none;
+    border-bottom:2px solid #937921;
 }
 
 header .container {
@@ -243,7 +272,7 @@ img {
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%); 
-    background-color: rgb(3, 60, 81, 0.5)
+    background-color: rgba(3, 13, 81, 0.5)
 }
 
 
@@ -261,10 +290,9 @@ img {
     background-color: #253a55;
 } */
 .content-section {
-    padding: 30px 0;
-    border-bottom: #e3dccc 2px dashed; 
     background-color: #f4f4f4;
-    
+    padding: 30px 0;
+    border-bottom: #e3dccc 2px dashed;     
 }
 
 .content-section h2 {
@@ -452,8 +480,6 @@ select {
 
 
 
-
-
 /* research html */
 .searchfield {
     font-weight: 600;
@@ -493,7 +519,6 @@ select {
     right: 0;
     bottom: 0;
     left: 0; */
-    
     width: 50px;
     height: 50px;
     background: #fff;
@@ -571,13 +596,6 @@ select {
     transform: rotate(-45deg);
 }
 
-#top {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 #top:before,
 #top:after {
     content: "";
@@ -589,8 +607,9 @@ select {
 }
 
 #top {
+    display: flex;
     flex: 1 1 100%; /* Adjusts to the width of the container */
-    margin: 10px;
+    margin-top: 100px;
     padding: 20px;
     height: 50px;
     
@@ -657,6 +676,7 @@ main {
     display: flex;
     justify-content: center;
     padding: 20px;
+    margin-top: 70px;
 }
 
 .main-content {
