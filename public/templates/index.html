@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institute of Politics at GWU</title>
     <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+
     <header>
         <div class="container">
             <h2><b><a id="homepage-A" href="/">GWU Institute of Politics</a></b></h2>
@@ -27,7 +30,7 @@
         <!-- <section id="hero"> -->
         <div id="hero" class="grid">
             <h2>The Institute of Politics seeks to inspire and guide students by promoting politics, encouraging action, and instilling a drive to tackle real-world problems. </h2>
-            <img class="hero-media" src="../static/jefferson_background.webp" alt="Hero Background">
+            <img class="hero-media rellax" data-rellax-speed="3" src="../static/jefferson_background.webp" alt="Hero Background">
         </div>
         <!-- </section> -->
 
@@ -130,5 +133,14 @@
     </footer>
     <script src="../js/main.js"></script>
     <script src="../js/events.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax');
+        ScrollReveal().reveal('#events', { delay: 500 });
+        ScrollReveal().reveal('#programs', { delay: 500 });
+        ScrollReveal().reveal('#internships', { delay: 500 });
+        ScrollReveal().reveal('#fellows', { delay: 500 });
+        ScrollReveal().reveal('#about', { delay: 500 });
+        </script>
+
 </body>
 </html>
