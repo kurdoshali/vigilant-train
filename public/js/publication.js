@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(publication => {
             console.log(publication)
-            document.getElementById('publication-title').textContent = publication.title;
-            document.getElementById('publication-author').textContent = publication.author;
-            document.getElementById('publication-description').textContent = publication.description;
-            document.getElementById('publication-published_date').textContent = new Date(publication.published_date).toDateString();
-            document.getElementById('publication-image').textContent = publication.picture_url;
-            document.getElementById('publication-link').textContent = publication.link_url;
+            document.getElementById('bookTitle').textContent = publication.title;
+            document.getElementById('bookAuthor').textContent = publication.author;
+            document.getElementById('bookDescription').textContent = publication.description;
+            document.getElementById('publishedDate').textContent = new Date(publication.published_date).toDateString();
+            // document.getElementById('bookCover').src = publication.picture_url;
+            document.getElementById('ctaButton').href = publication.link_url;
         })
         .catch(error => {
             console.error('Error fetching publication:', error);
