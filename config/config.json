@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "kurdoshali",
-    "password": "gwu_iop_db2024",
+    "username": "ilincahirtopanu",
+    "password": "22cart64",
     "database": "gwu_iop_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
