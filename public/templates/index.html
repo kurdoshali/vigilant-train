@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institute of Politics at GWU</title>
     <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
@@ -29,7 +30,9 @@
 
     <div id="navbar">
         <!-- <div class="container"> -->
-            <h2><b><a id="homepage-A" href="/" style="font-size: 25px">GWU Institute of Politics</a></b></h2>
+            <a class="navbar-brand" href="#" >
+                <img src="../static/small_iop_white.png" style="border-radius: 10px;" alt="Bootstrap" width="90" height="50">
+            </a>
             <nav>
                 <ul>
                     <a href="/templates/events.html">Events</a>
@@ -59,14 +62,13 @@
             <a href="events.html" class="button">View All Events</a>
         </div>
     </section>
-    <section id="programs" class="content-section">
+    <!-- <section id="programs" class="content-section">
         <div class="container">
             <h2>Programs</h2>
             <ul>
                 <li><a href="#civics">Civics</a></li>
                 <li><a href="#advocacy">Campaign and Advocacy Program</a></li>
                 <li><a href="#leadership">Women's Initiative in Leadership</a></li>
-                <!-- Add more programs as needed -->
             </ul>
         </div>
     </section>
@@ -77,20 +79,20 @@
             <p>Our internship programs provide students with fully-funded opportunities in government, politics, journalism, and public service roles.</p>
             <a href="#more-info" class="button">Learn More</a>
         </div>
-    </section>
+    </section> -->
     
     <section id="fellows" class="content-section">
         <div class="container">
-            <h2>Meet Our Fellows</h2>
+            <h2>Application</h2>
             <div class="fellow">
-                <h3>Spring 2024 Fellows</h3>
+                <h3>Fall 2024 Application</h3>
                 <p>Details about our current fellows and their study groups.</p>
             </div>
-            <a href="#all-fellows" class="button">View All Fellows</a>
+            <!-- <a href="#all-fellows" class="button">View All Fellows</a> -->
         </div>
-    </section>
+    </section>  
     
-    <section id="about" class="content-section">
+    <section id="about" class="content-section" style="padding-bottom: 105px; padding-top: 50px;">
         <div class="container">
             <h2>About the Institute of Politics</h2>
             <p>The Institute of Politics at Harvard University, founded in 1966 as a memorial to President John F. Kennedy, strives to promote understanding and cooperation between academia and public affairs.</p>
@@ -125,18 +127,18 @@
         function scrollFunction() {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             document.getElementById("navbar").style.padding = "5px";
-            document.getElementById("homepage-A").style.fontSize = "20px";
+            // document.getElementById("homepage-A").style.fontSize = "20px";
             document.getElementById("navbar").style.backgroundColor = "#fff";
-            document.getElementById("homepage-A").style.color = "#050b7a";
+            // document.getElementById("homepage-A").style.color = "#050b7a";
             document.querySelectorAll("#navbar nav ul a").forEach(anchor => {
                 anchor.style.color = "#050b7a";
             });
             
         } else {
             document.getElementById("navbar").style.padding = "10px";
-            document.getElementById("homepage-A").style.fontSize = "25px";
+            // document.getElementById("homepage-A").style.fontSize = "25px";
             document.getElementById("navbar").style.backgroundColor = "";
-            document.getElementById("homepage-A").style.color = "#ffffff";
+            // document.getElementById("homepage-A").style.color = "#ffffff";
             document.querySelectorAll("#navbar nav ul a").forEach(anchor => {
                 anchor.style.color = "#ffffff";
             });

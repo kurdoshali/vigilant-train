@@ -322,6 +322,7 @@ img {
     padding: 20px;
     margin-bottom: 20px;
     border: #ccc 1px solid;
+    text-align: center;
 }
 
 .button {
