@@ -5,90 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Gallery</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-.head {
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top:50px;
-}
-
-.search-bar {
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.filters {
-    display: flex;
-    gap: 10px;
-}
-
-.filters select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.book-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.book-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.book-item:hover {
-    transform: scale(1.05);
-}
-
-.book-item img {
-    width: 100%;
-    height: auto;
-}
-
-.book-item p {
-    padding: 10px;
-    font-size: 14px;
-    color: #555;
-}
-    </style>
-<link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
     <div id="navbar">
@@ -107,44 +24,7 @@ main {
             </nav>
         <!-- </div> -->
       </div>
-    <div class="head">
-        <div class="search-bar">
-            <input type="text" placeholder="Search for books...">
-        </div>
-        <div class="filters">
-            <select>
-                <option value="all">All Categories</option>
-                <option value="fiction">Fiction</option>
-                <option value="non-fiction">Non-Fiction</option>
-                <option value="science">Science</option>
-                <option value="history">History</option>
-            </select>
-            <select>
-                <option value="all">All Authors</option>
-                <option value="author1">Author 1</option>
-                <option value="author2">Author 2</option>
-                <option value="author3">Author 3</option>
-            </select>
-        </div>
-    </div>
-    <main>
-        <div class="book-gallery">
-            <div class="book-item">
-                <a href="#">
-                    <img src="https://via.placeholder.com/150" alt="Book Cover">
-                    <p>Book Title</p>
-                </a>
-            </div>
-            <!-- Repeat .book-item for more book placeholders -->
-            <div class="book-item">
-                <a href="#">
-                    <img src="https://via.placeholder.com/150" alt="Book Cover">
-                    <p>Book Title</p>
-                </a>
-            </div>
-            <!-- Add as many book items as needed -->
-        </div>
-    </main>
+      <h1 style="text-align:center; margin-top: 150px;">COMING SOON</h1>
     <script>
         window.onscroll = function() {scrollFunction()};
 

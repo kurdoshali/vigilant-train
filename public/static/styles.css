@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: url(background_design.jpg);
     
 }
 
@@ -35,8 +35,8 @@ html.sr .load-hidden {
 }
 
 #navbar {
-    background: #ffffff;
-    color: #050b7a;
+    color: #ffffff;
+    background:#466485;
     overflow: hidden;
     /* padding: 12px; Large padding which will shrink on scroll (using JS) */
     transition: 0.4s; /* Adds a transition effect when the padding is decreased */
@@ -45,6 +45,7 @@ html.sr .load-hidden {
     top: 0; /* At the top */
     z-index: 99;
     padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -63,7 +64,7 @@ html.sr .load-hidden {
 
 
 #navbar a {
-    color: #050b7a;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -193,7 +194,7 @@ img {
 .event-date, .event-time {
     display: flex;
     align-items: center;
-    color: #555;
+    color: rgb(0, 0, 0);
     margin-bottom: 5px;
 }
 .event-date:before, .event-time:before {
@@ -212,7 +213,9 @@ img {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23555"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>');
 }
 .event-header {
-    background-color: #0190DB;
+    transition: 0.3s;
+    background-color: #050b7a;
+    /* background-color: #0190DB; */
     color: #ffffff;
     padding: 15px;
     margin: -10px -10px 0 -10px; /* Add this line */
@@ -220,6 +223,20 @@ img {
     overflow:auto;
     
 }
+
+.a-events:hover .event-header {
+    background-color: #caae52;
+    
+    /* background-color: #0190DB; */
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    margin: -10px -10px 0 -10px; /* Add this line */
+    border-radius: 20px 20px 0 0; /* Add this line */
+    overflow:auto;
+}
+
+
 .event-header h3 {
     margin: 0;
     font-size: 1.2em;
@@ -290,7 +307,7 @@ img {
     background-color: #253a55;
 } */
 .content-section {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     padding: 30px 0;
     border-bottom: #e3dccc 2px dashed;     
 }
@@ -305,6 +322,7 @@ img {
     padding: 20px;
     margin-bottom: 20px;
     border: #ccc 1px solid;
+    text-align: center;
 }
 
 .button {
@@ -449,6 +467,7 @@ form {
 }
 
 #events-page-body {
+    padding-top: 100px;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 
