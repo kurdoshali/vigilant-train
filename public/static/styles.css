@@ -274,6 +274,7 @@ img {
 #hero {
     position: relative;
     overflow: hidden;
+    width: 100%;
 } 
 
 
@@ -343,6 +344,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    
 }
 
 footer nav ul {
@@ -470,10 +472,10 @@ form {
 
 #events-page-body {
     padding-top: 100px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 
-        "content-section sidebar";
+        "content-section sidebar"; */
     background-color: #ffffff;
 
 }
@@ -783,6 +785,14 @@ h1 {
     min-width: 300px;
 }
 
+#bookCover {
+    /* max-width: 100%; */
+    /* height: auto; */
+    width: 300px;
+    height: 300px;
+    /* object-fit: contain; */
+}
+
 #bookTitle {
     font-size: 2.8em;
     margin-bottom: 10px;
@@ -839,4 +849,55 @@ h1 {
     .cta-button {
         padding: 12px 24px;
     }
+}
+
+
+
+
+
+
+
+
+
+/*              EVENT PAGE             */
+
+/* Event Title */
+#event-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #444;
+}
+
+/* Event Details Container */
+#event-details {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Description */
+#event-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Event Details Paragraphs */
+#event-details p {
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+/* Strong tags for labels */
+#event-details strong {
+    color: #007bff;
+    font-weight: bold;
+}
+
+#padding-div {
+    padding-top: 150px;
 }
