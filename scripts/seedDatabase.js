@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('postgres://ilincahirtopanu:22cart64@localhost:5432/gwu_iop_db');
+const sequelize = new Sequelize('postgres://kurdoshali:gwu_iop_db2024@localhost:5432/gwu_iop_db');
 const Event = require('../models/event')(sequelize, DataTypes);
 const Publication = require('../models/publication')(sequelize, DataTypes);
 const person = require('../models/person')(sequelize, DataTypes);
@@ -26,7 +26,7 @@ async function seedDatabase() {
                 description: 'Description for publication 1',
                 published_date: new Date('2023-07-01'),
                 author: 'Author 1',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication1'
             },
             {
@@ -34,7 +34,7 @@ async function seedDatabase() {
                 description: 'Description for publication 2',
                 published_date: new Date('2023-07-02'),
                 author: 'Author 2',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication2'
             },
             {
@@ -42,7 +42,7 @@ async function seedDatabase() {
                 description: 'Description for publication 3',
                 published_date: new Date('2023-07-03'),
                 author: 'Author 3',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication3'
             },
             {
@@ -50,7 +50,7 @@ async function seedDatabase() {
                 description: 'Description for publication 4',
                 published_date: new Date('2023-07-04'),
                 author: 'Author 4',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication4'
             },
             {
@@ -58,7 +58,7 @@ async function seedDatabase() {
                 description: 'Description for publication 5',
                 published_date: new Date('2023-07-05'),
                 author: 'Author 5',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication5'
             },
             {
@@ -66,7 +66,7 @@ async function seedDatabase() {
                 description: 'Description for publication 6',
                 published_date: new Date('2023-07-06'),
                 author: 'Author 6',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication6'
             },
             {
@@ -74,7 +74,7 @@ async function seedDatabase() {
                 description: 'Description for publication 7',
                 published_date: new Date('2023-07-07'),
                 author: 'Author 7',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication7'
             },
             {
@@ -82,7 +82,7 @@ async function seedDatabase() {
                 description: 'Description for publication 8',
                 published_date: new Date('2023-07-08'),
                 author: 'Author 8',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication8'
             },
             {
@@ -90,7 +90,7 @@ async function seedDatabase() {
                 description: 'Description for publication 9',
                 published_date: new Date('2023-07-09'),
                 author: 'Author 9',
-                picture_url: 'https://via.placeholder.com/150',
+                picture_url: 'https://placehold.co/150',
                 link_url: 'https://example.com/publication9'
             }
         ];
@@ -103,70 +103,121 @@ async function seedDatabase() {
         const people = [
           {
             "name": "Manav Raval",
+            "type": "seniority",
             "position": "Founder and Director",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "../static/studentpic6.png",
             "major": "International Affairs & Peace Studies",
             "minor": null,
             "hometown": "Florence, New Jersey",
             "biography": "Manav Raval is the Founder and Director of the Institute of Politics. Manav started the Institute to provide politically-minded students with the ability to immerse themselves in politics in various ways. Manav has previously served as a researcher for RTI International, UNESCO, and USAID. He hopes to pursue a doctoral program shortly after graduating. Interested in the field of international development, Manav aims to work closely with locals, organizations, academics, and scholars to tackle development issues throughout his career. Manav is an avid baseball fan, movie buff, and nap participant alongside his dog, Duke. "
           },
           {
-            "name": "Amy Saez",
-            "position": "Chief Financial Officer",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "International Business & Finance",
-            "minor": null,
-            "hometown": "San Juan, Puerto Rico",
-            "biography": "Amy serves as the Chief Financial Officer at the Institute of Politics. Amy joined the Institute of Politics (IOP) as CFO to leverage her financial expertise and leadership skills in a meaningful way. Amy is driven by a desire to create opportunities for students in politics and address the lack of dedicated career advising at GW, contributing to the IOP's mission of inspiring political action and practical learning. Amy is also DC Trek Director for the GW Women in Business. "
-          },
-          {
-            "name": "Lily Vanderlaan",
-            "position": "Director of Student Programs",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "Political Science",
-            "minor": "Psychology and Immigration Studies",
-            "hometown": "Fort Myers, Florida",
-            "biography": "Lily is IOP’s director of student programs and believes that IOP will provide students with the opportunity to be involved in both local and national politics. She is studying political science, psychology, and immigration studies. She hopes to attend law school to practice immigration law and work with refugees after graduating from GW. She is currently a part of the Phi Alpha Delta legal fraternity, works for the Messina Group Consulting firm, and works as a case assistant for an immigration lawyer."
-          },
-          {
             "name": "Chase Fredriksen Isaacs",
+            "type": "seniority",
             "position": "Chief Programming Officer",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "../static/studentpic9.png",
             "major": "Psychological and Brain Sciences",
             "minor": "Cross Cultural Communication and Linguistics",
             "hometown": "New York, NY",
             "biography": "Chase Fredriksen Isaacs serves as the Chief Programming Officer for the Institute of Politics (IOP). She joined IOP with the specific goal of making politics more accessible for individuals who aren’t engaging in political discourse on a daily basis. Chase also serves as the Vice-President for BridgeGW, a multi-partisan political organization on campus that works to decrease polarization across college campuses through moderated discussions. When not engaged in politics, Chase works as a research assistant in The Goodman Emotion and Resilience Lab where she works to further her career in psychology and eventually apply to PhD programs in Clinical Psychology. Her unique background in advocacy, nonprofit work, and knowledge of human behavior allows her to provide a new perspective to politics."
           },
           {
+            "name": "Amy Saez",
+            "type": "seniority",
+            "position": "Chief Financial Officer",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
+            "major": "International Business & Finance",
+            "minor": null,
+            "hometown": "San Juan, Puerto Rico",
+            "biography": "Amy serves as the Chief Financial Officer at the Institute of Politics. Amy joined the Institute of Politics (IOP) as CFO to leverage her financial expertise and leadership skills in a meaningful way. Amy is driven by a desire to create opportunities for students in politics and address the lack of dedicated career advising at GW, contributing to the IOP's mission of inspiring political action and practical learning. Amy is also DC Trek Director for the GW Women in Business. "
+          },
+          {
             "name": "Amina Iman",
+            "type": "seniority",
             "position": "Chief Operating Officer",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "../static/studentpic8.png",
             "major": "International Affairs",
             "minor": "Arabic",
             "hometown": "Alexandria, Virginia",
             "biography": "Amina Iman serves as the Chief Operating Officer for the IOP. Since joining the Institute in June of 2023, Amina has contributed to advancing IOP’s administrative goals as a result of her passion and experience in creating empowering spaces for youth and aspiring professionals in which they are provided the tools and opportunities to succeed, specifically within the realm of political science and diplomacy. Amina also serves as the Director of Government Relations for GW’s leading refugee advocacy organization, No Lost Generation. She has held various research and board-level positions for DMV-based government and non-governmental institutions, granting her valuable experience and critical insight into ensuring her leadership and sociopolitical analytical skills translate into meaningful policy solutions."
           },
           {
-            "name": "Belsem Aljobory",
-            "position": "Student Chair of Department of Student Task Forces",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "International Affairs",
-            "minor": "International Business",
-            "hometown": "Philadelphia, Pennsylvania",
-            "biography": "Belsem Aljobory serves as the Student Chair of the Department of Student Task Forces for the IOP. Belsem joined the Institute to empower other students to transform their ideas into impactful initiatives acting as mini-NGOs. Her experience as a founder of the As We Rise Foundation, combined with her extensive background in international affairs and research, informs her approach to leadership and mentorship to the Student Task Forces within the Institute. Belsem has held various roles in government and non-governmental organizations, which have helped to hone her skills in policy analysis and global engagement. "
+            "name": "Lily Vanderlaan",
+            "type": "seniority",
+            "position": "Director of Student Programs",
+            "picture_url": "../static/studentpic7.png",
+            "major": "Political Science",
+            "minor": "Psychology and Immigration Studies",
+            "hometown": "Fort Myers, Florida",
+            "biography": "Lily is IOP’s director of student programs and believes that IOP will provide students with the opportunity to be involved in both local and national politics. She is studying political science, psychology, and immigration studies. She hopes to attend law school to practice immigration law and work with refugees after graduating from GW. She is currently a part of the Phi Alpha Delta legal fraternity, works for the Messina Group Consulting firm, and works as a case assistant for an immigration lawyer."
           },
           {
             "name": "Skylar Blumenauer",
+            "type": "seniority",
             "position": "Student Chair of Research Department",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
             "major": "Political Science",
             "minor": "International Affairs, Law and Society",
             "hometown": "Navarre, Ohio",
             "biography": "Skylar Blumenauer serves as the Student Chair of the Research Department for the Institute of Politics. She joined IOP her sophomore year with the hope of improving and increasing the political programming, especially research, that is available to GW students. Skylar is also the Co-Director of the Newsletter in the Women’s Pre-Law Student Association and a writer for the GW Justice Journal, where she has written various small research articles on a variety of political topics. Outside of GW, Skylar works as an Associate at the Pan American Development Foundation."
           },
           {
+            "name": "Belsem Aljobory",
+            "type": "seniority",
+            "position": "Student Chair of Department of Student Task Forces",
+            "picture_url": "../static/studentpic4.jpg",
+            "major": "International Affairs",
+            "minor": "International Business",
+            "hometown": "Philadelphia, Pennsylvania",
+            "biography": "Belsem Aljobory serves as the Student Chair of the Department of Student Task Forces for the IOP. Belsem joined the Institute to empower other students to transform their ideas into impactful initiatives acting as mini-NGOs. Her experience as a founder of the As We Rise Foundation, combined with her extensive background in international affairs and research, informs her approach to leadership and mentorship to the Student Task Forces within the Institute. Belsem has held various roles in government and non-governmental organizations, which have helped to hone her skills in policy analysis and global engagement. "
+          },
+          {
+            "name": "Emely Cespedes",
+            "type": "seniority",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
+            "major": "International Affairs",
+            "minor": "Sustainability",
+            "hometown": "Upper Saddle River, NJ",
+            "biography": "Emely decided to get involved in IOP because of the great potential the institute has to provide incredible experiences for students. These experiences range from research, internships, guest speakers, and trips around the nation's capital. Emely believes IOP creates a bridge that will bring amazing opportunities to students of all backgrounds and political affiliations. Currently, Emely is also the co-director of the newsletter and communications for the Women’s Pre-Law Student Organization. Throughout her time at GW, Emely has been involved in politics through her coursework and internships. Emely hopes to attend law school after graduation to further pursue her passion for politics and law."
+          },
+          {
+            "name": "Hannah Lytle",
+            "type": "seniority",
+            "picture_url": "../static/studentpic5.png",
+            "major": "Political Science and Criminal Justice",
+            "minor": null,
+            "hometown": "Kansas City, Missouri",
+            "biography": "Hannah is a founding member of IOP. She is passionate about providing students with opportunities to interact with their communities to promote effective change and believes IOP will be an important resource to provide students with the chance to be involved with politics in a more personal way. Hannah is also the president of the Undergraduate GW Moot Court Team and president of the PGP at GW."
+          },
+          {
+            "name": "Olivia Rosewarne",
+            "type": "seniority",
+            "picture_url": "../static/studentpic3.png",
+            "major": "Economics and International Business",
+            "minor": null,
+            "hometown": "Sunderland, Massachusetts",
+            "biography": "Olivia has been a member of the IOP since its inception. She believes the IOP not only strengthens the political network for students in related majors but also offers valuable programs for anyone interested in politics. Through its research and student initiatives, the IOP provides opportunities for all students to engage with real-world issues, which Olivia views as significant to student development. She has experience in government roles and a passion for international economic development. Olivia is also the co-president of GW's Women's Club Volleyball team."
+          },
+          {
+            "name": "Henry Scriven-Young",
+            "type": "seniority",
+            "picture_url": "../static/studentpic2.jpg",
+            "major": "Political Communication",
+            "minor": "Chinese and Sustainability",
+            "hometown": "Naperville, Illinois",
+            "biography": "Henry Scriven-Young has been a dedicated member of the Institute of Politics (IOP) since its inception, contributing to its growth from a small group to an organization with over 20 members. Driven by a passion for politics and leadership, Henry also serves as the Ranking Student on the GW Dining Student Advisory Panel, Director of Membership for the National Residence Hall Honorary (NRHH), and External Vice President of GW’s University Singers. He is proud to be part of an organization that brings inspiring, educational, and exciting opportunities to students."
+          },
+          {
+            "name": "Shifa Ali",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
+            "major": "Political Science",
+            "minor": null,
+            "hometown": "Long Island, NY",
+            "biography": "Shifa is a junior at The George Washington University studying Political Science and Public Health. Shifa joined IOP during her sophomore year and is extremely passionate about public policy, specifically health policy. Shifa is looking forward to working with like-minded students on political projects and conducting research during her time at IOP.  On campus, Shifa is the Director of Member Conduct of Pi Beta Phi’s DC Alpha Chapter and Social Media Director for Dear Asian Youth at GW. She is also interning at a political marketing firm, conducting research and copywriting advertising materials for political action committees."
+          },
+          {
             "name": "Bryson Handy",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
             "major": "International Affairs and Economics",
             "minor": null,
             "hometown": "Lawrenceville, Georgia",
@@ -174,55 +225,15 @@ async function seedDatabase() {
           },
           {
             "name": "Mia Adams",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
             "major": "Political Science",
             "minor": "History",
             "hometown": "Easton, Massachusetts",
             "biography": "Mia is a senior at GW and has been involved in IOP since her sophomore year because she values its promotion of civic engagement and political research. Mia is specifically interested in law and policy making, and has internship experience in Congress. She’s also pursuing her Master’s Degree in Legislative Affairs through GW’s dual degree program. In addition to the Institute, Mia is a member of the GW Phi Alpha Delta Pre-Law Fraternity, Issue Captain of the GW Undergraduate Moot Court Team, and has written for The GW Hatchet."
           },
           {
-            "name": "Olivia Rosewarne",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "Economics and International Business",
-            "minor": null,
-            "hometown": "Sunderland, Massachusetts",
-            "biography": "Olivia has been a member of the IOP since its inception. She believes the IOP not only strengthens the political network for students in related majors but also offers valuable programs for anyone interested in politics. Through its research and student initiatives, the IOP provides opportunities for all students to engage with real-world issues, which Olivia views as significant to student development. She has experience in government roles and a passion for international economic development. Olivia is also the co-president of GW's Women's Club Volleyball team."
-          },
-          {
-            "name": "Hannah Lytle",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "Political Science and Criminal Justice",
-            "minor": null,
-            "hometown": "Kansas City, Missouri",
-            "biography": "Hannah is a founding member of IOP. She is passionate about providing students with opportunities to interact with their communities to promote effective change and believes IOP will be an important resource to provide students with the chance to be involved with politics in a more personal way. Hannah is also the president of the Undergraduate GW Moot Court Team and president of the PGP at GW."
-          },
-          {
-            "name": "Shifa Ali",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "Political Science",
-            "minor": null,
-            "hometown": "Long Island, NY",
-            "biography": "Shifa is a junior at The George Washington University studying Political Science and Public Health. Shifa joined IOP during her sophomore year and is extremely passionate about public policy, specifically health policy. Shifa is looking forward to working with like-minded students on political projects and conducting research during her time at IOP.  On campus, Shifa is the Director of Member Conduct of Pi Beta Phi’s DC Alpha Chapter and Social Media Director for Dear Asian Youth at GW. She is also interning at a political marketing firm, conducting research and copywriting advertising materials for political action committees."
-          },
-          {
-            "name": "Henry Scriven-Young",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "Political Communication",
-            "minor": "Chinese and Sustainability",
-            "hometown": "Naperville, Illinois",
-            "biography": "Henry Scriven-Young has been a dedicated member of the Institute of Politics (IOP) since its inception, contributing to its growth from a small group to an organization with over 20 members. Driven by a passion for politics and leadership, Henry also serves as the Ranking Student on the GW Dining Student Advisory Panel, Director of Membership for the National Residence Hall Honorary (NRHH), and External Vice President of GW’s University Singers. He is proud to be part of an organization that brings inspiring, educational, and exciting opportunities to students."
-          },
-          {
-            "name": "Emely Cespedes",
-            "picture_url": "https://via.placeholder.com/150",
-            "major": "International Affairs",
-            "minor": "Sustainability",
-            "hometown": "Upper Saddle River, NJ",
-            "biography": "Emely decided to get involved in IOP because of the great potential the institute has to provide incredible experiences for students. These experiences range from research, internships, guest speakers, and trips around the nation's capital. Emely believes IOP creates a bridge that will bring amazing opportunities to students of all backgrounds and political affiliations. Currently, Emely is also the co-director of the newsletter and communications for the Women’s Pre-Law Student Organization. Throughout her time at GW, Emely has been involved in politics through her coursework and internships. Emely hopes to attend law school after graduation to further pursue her passion for politics and law."
-          },
-          {
             "name": "Grace Newman",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "../static/studentpic1.png",
             "major": "Business Analytics",
             "minor": "Public Policy",
             "hometown": "Western Springs, Illinois",
@@ -230,7 +241,7 @@ async function seedDatabase() {
           },
           {
             "name": "Jonesy Strell",
-            "picture_url": "https://via.placeholder.com/150",
+            "picture_url": "https://placehold.co/150x150?text=No \nImage",
             "major": "Political Science",
             "minor": null,
             "hometown": null,

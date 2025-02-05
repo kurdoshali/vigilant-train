@@ -26,6 +26,9 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 50%;
+                width: 250px;
+                height: 250px;
+                object-fit: contain;
             }
             .member-info {
                 margin-top: 15px;
@@ -40,7 +43,10 @@
 <body>
     <div id="navbar">
         <!-- <div class="container"> -->
-            <h2><b><a id="homepage-A" href="/" style="font-size: 25px">GWU Institute of Politics</a></b></h2>
+            <a class="navbar-brand" href="/" >
+                <img src="../static/small_iop_white.png" style="border-radius: 10px;" alt="Bootstrap" width="90" height="50">
+            </a>
+
             <nav>
                 <ul>
                     <a href="/templates/events.html">Events</a>
